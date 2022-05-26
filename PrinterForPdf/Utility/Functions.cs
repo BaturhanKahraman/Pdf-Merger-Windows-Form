@@ -1,4 +1,5 @@
-﻿using iText.Kernel.Pdf;
+﻿using System.Drawing.Printing;
+using iText.Kernel.Pdf;
 using PrinterForPdf.Entity;
 using System.Linq;
 
@@ -12,7 +13,9 @@ namespace PrinterForPdf.Utility
             printObject.NewPdfFile = new PdfDocument(new PdfWriter(printObject.PathName));
             foreach (var fileName in printObject.FilePaths)
             {
-                var selectedPdfDocument = new PdfDocument(new PdfReader(fileName));
+                var pdfReader = new PdfReader(fileName);
+                pdfReader.SetUnethicalReading(true);
+                var selectedPdfDocument = new PdfDocument(pdfReader);
                 int numberOfPages = selectedPdfDocument.GetNumberOfPages();
                 selectedPdfDocument.CopyPagesTo(1, numberOfPages, printObject.NewPdfFile);
                 if (numberOfPages % 2 == 1 && printObject.FilePaths.Last() != fileName)
@@ -21,8 +24,5 @@ namespace PrinterForPdf.Utility
             printObject.NewPdfFile.Close();
             return true;
         }
-
-
-
     }
 }
