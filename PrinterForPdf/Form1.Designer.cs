@@ -40,7 +40,7 @@ namespace PrinterForPdf
             // 
             // btnSelectFiles
             // 
-            this.btnSelectFiles.Location = new System.Drawing.Point(550, 172);
+            this.btnSelectFiles.Location = new System.Drawing.Point(12, 172);
             this.btnSelectFiles.Name = "btnSelectFiles";
             this.btnSelectFiles.Size = new System.Drawing.Size(238, 26);
             this.btnSelectFiles.TabIndex = 0;
@@ -76,9 +76,9 @@ namespace PrinterForPdf
             // 
             // btnMergeAndSave
             // 
-            this.btnMergeAndSave.Location = new System.Drawing.Point(605, 405);
+            this.btnMergeAndSave.Location = new System.Drawing.Point(605, 172);
             this.btnMergeAndSave.Name = "btnMergeAndSave";
-            this.btnMergeAndSave.Size = new System.Drawing.Size(183, 33);
+            this.btnMergeAndSave.Size = new System.Drawing.Size(183, 26);
             this.btnMergeAndSave.TabIndex = 4;
             this.btnMergeAndSave.Text = "Birleştir ve Kaydet";
             this.btnMergeAndSave.UseVisualStyleBackColor = true;
@@ -94,7 +94,7 @@ namespace PrinterForPdf
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(800, 212);
             this.Controls.Add(this.btnMergeAndSave);
             this.Controls.Add(this.lboxFileNames);
             this.Controls.Add(this.lblOutput);
